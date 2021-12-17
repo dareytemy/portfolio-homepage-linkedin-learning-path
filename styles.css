@@ -1,0 +1,265 @@
+/*
+COLOR PALLETTE
+#f7fff7 - almost white
+#343434 - dark grey - almost black
+#2f3061 - dark blue
+#ffe660 - yellow
+#a1c607 - light blue
+*/
+
+
+/* Global styles
+---------------------------------------------------*/
+img {
+    width: 300px;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ffe660;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+    font-family: "Graphik", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+}
+
+.divider > section:last-of-type {
+    border-bottom-style: none;
+}
+
+@font-face {
+    font-family:"Graphix" ;
+    src: url(fonts/GraphikBlack.otf), 
+    /* url(fonts/GraphikBlackItalic.otf), */
+    url(fonts/GraphikBold.otf),
+    /* url(fonts/GraphikBoldItalic.otf), */
+    url(fonts/GraphikExtralight.otf),
+    /* url(fonts/GraphikExtralightItalic.otf), */
+    url(fonts/GraphikLight.otf),
+    /* url(fonts/GraphikLightItalic.otf), */
+    url(fonts/GraphikMedium.otf),
+    /* url(fonts/GraphikMediumItalic.otf), */
+    url(fonts/GraphikRegular.otf),
+    /* url(fonts/GraphikRegularItalic.otf), */
+    url(fonts/GraphikSemibold.otf),
+    /* url(fonts/GraphikSemiboldItalic.otf), */
+    url(fonts/GraphikSuper.otf),
+    /* url(fonts/GraphikSuperItalic.otf), */
+    url(fonts/GraphikThin.otf),
+    /* url(fonts/GraphikThinItalic.otf), */
+    ;
+}
+
+.item-details h3 + p {
+    font-style: italic;
+}
+
+.item-details h3 ~ p {
+    margin: 0;
+}
+
+/* body {
+    font-family: "Graphik", sans-serif;
+} */
+
+
+/* Profile Section
+---------------------------------------------------*/
+header {
+    background-color: #2f3061;
+    color: #f7fff7;
+    /* text-align: center; */
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.sub-heading {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    padding-bottom: 16px;
+}
+/* Projects
+---------------------------------------------------*/
+.projects {
+background: #f7fff7;
+}
+
+.projects a {
+    color: #2f3061;
+}
+
+.projects a.btn {
+    background: #2f3061;
+    color: #f7fff7;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.projects .btn:hover {
+    background: rgba(47, 48, 97s, 80%);
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+
+/* .project-item img {
+    float: left;
+    margin-right: 20px;
+} */
+
+.project-item h3 {
+    margin-top: 0   ;
+}
+
+/* Work Experience
+---------------------------------------------------*/
+.work-experience {
+background: #a1c607;
+}
+
+/* .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+} */
+
+
+
+
+/* Education
+---------------------------------------------------*/
+.education {
+    background-image: url(assets/education-background.jpg);
+    background-size: cover;
+    background-position: right top;
+    padding-bottom: 100px;
+}
+
+.education p {
+    width: 60%;
+}
+
+
+/* Contact Info
+---------------------------------------------------*/
+footer {
+    background: #343434;
+    color: #f7fff7;
+    /* text-align: center; */
+}
+
+.contact-list {
+list-style-type: none;
+padding: 0;
+/* display: flex;
+justify-content: center; */
+}
+
+.contact-list a {
+    padding: 15px;
+    display: inline-block;
+}
+
+
+/* Responsive Styles
+---------------------------------------------------*/
+
+/* When we are at 750px or smaller, everything on the 
+project section is stacked, and when 
+we are on 750px or larger, 
+the float property rule is then obeyed. */
+
+@media screen and (min-width: 750px) {
+   
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+
+    header, footer {
+        text-align: left;
+    }
+
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 749px) {
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        line-height: 1;   
+    }
+
+    .contact-list a {
+        padding: 8px;
+    }
+}
